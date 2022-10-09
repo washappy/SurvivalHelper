@@ -1,25 +1,26 @@
 package surivival.helpful
 
 import org.bukkit.plugin.java.JavaPlugin
-import org.bukkit.Bukkit
 import org.bukkit.ChatColor
-import surivival.helpful.commands.mlCommand
-import surivival.helpful.commands.pcCommand
+import surivival.helpful.commands.HmCommand
+import surivival.helpful.commands.MlCommand
+import surivival.helpful.commands.PcCommand
 
 class Helpful : JavaPlugin() {
 
     override fun onEnable() {
         registerCommands()
-//TODO(Chatcolor)
-        Bukkit.getLogger().info(ChatColor.AQUA.toString() + "survival helper activated")
+
+        logger.info("survival helper activated" + ChatColor.AQUA)
     }
 
     override fun onDisable() {
-        Bukkit.getLogger().info(ChatColor.AQUA.toString() + "survival helper deactivated")
+        logger.info("survival helper deactivated" + ChatColor.AQUA)
     }
 
     private fun registerCommands() {
-        getCommand("mylocation")!!.setExecutor(mlCommand())
-        getCommand("playercompass")!!.setExecutor(pcCommand())
+        getCommand("mylocation")!!.setExecutor(MlCommand())
+        getCommand("playercompass")!!.setExecutor(PcCommand())
+        getCommand("helpme")!!.setExecutor(HmCommand())
     }
 }

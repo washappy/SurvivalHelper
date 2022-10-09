@@ -7,9 +7,10 @@ import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.command.TabCompleter
 import org.bukkit.entity.Player
+import surivival.helpful.Liner
 import kotlin.math.floor
 
-class mlCommand : CommandExecutor, TabCompleter {
+class MlCommand : CommandExecutor, TabCompleter {
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
         if (sender is Player) {
@@ -47,7 +48,7 @@ class mlCommand : CommandExecutor, TabCompleter {
 
     private fun getLine(player : Player) : String {
         val location = player.location
-        return player.name + "님은 " + location.world.name + " x : ${floor(location.x)}, y : ${floor(location.y)}, z : ${floor(location.z)} 에 있습니다"
+        return Liner.addLine(player.name + "님은 " + location.world.name + " x : ${floor(location.x).toInt()}, y : ${floor(location.y).toInt()}, z : ${floor(location.z).toInt()} 에 있습니다")
     }
 
 }

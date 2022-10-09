@@ -15,3 +15,8 @@ commands:
     description:
     usage:
     aliases: [pc, 플레이어나침반]
+
+  helpme:
+    description:
+    usage:
+    aliases: [hm, 살려줘]

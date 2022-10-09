@@ -2,6 +2,7 @@ package surivival.helpful.project.playercompass
 
 import net.kyori.adventure.text.Component
 import org.bukkit.Material
+import org.bukkit.enchantments.Enchantment
 import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 import surivival.helpful.bases.ItemBase
@@ -15,6 +16,7 @@ object Compass : ItemBase() {
             itemMeta = itemMeta.apply {
                 displayName(Component.text("${player.name}을(를) 가르키는 나침반").color(TextColors.AQUA.color))
                 lore(itemLore())
+                addEnchant(Enchantment.LURE, 1, true)
             }
         }
     }
