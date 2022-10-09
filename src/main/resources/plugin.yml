@@ -1,0 +1,17 @@
+name: helper
+version: '${project.version}'
+main: surivival.helpful.Helpful
+api-version: 1.19
+authors: [ behappy20 ]
+description: 야생 도움 플러그인
+website: https://github.com/washappy
+commands:
+  mylocation:
+    description: /mylocation 또는 /mylocation [플레이어 이름] (여러개 ㄱㄴ)으로 위치 채팅에 표시
+    usage: "/mylocation\n/mylocation [플레이어이름] [플레이어이름] .."
+    aliases: [ml, 내위치]
+
+  playercompass:
+    description:
+    usage:
+    aliases: [pc, 플레이어나침반]
